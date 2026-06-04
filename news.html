@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="新闻中心 - 北京华恒鑫达科技发展有限公司最新动态与行业资讯">
+    <title>新闻中心 - 北京华恒鑫达科技发展有限公司</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .news-card {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+        .news-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        .news-card .news-date-box {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            text-align: center;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+        .news-card .news-date-box .day {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .news-card .news-date-box .month {
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        .news-card .news-info h4 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .news-card .news-info h4 a {
+            color: var(--primary);
+        }
+        .news-card .news-info h4 a:hover {
+            color: var(--accent);
+        }
+        .news-card .news-info p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        .news-card .news-info .meta {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        @media (max-width: 600px) {
+            .news-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-contact">
+                <span>📞 010-88258670 / 88258671</span>
+                <span>📧 sales@wahenyida.com</span>
+                <span>📍 北京市石景山区万达广场D座1015室</span>
+            </div>
+            <div class="top-lang">
+                <a href="index.html">中文</a> | <a href="#">English</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">华</div>
+                <div class="logo-text">
+                    <h1>华恒鑫达</h1>
+                    <div class="subtitle">Wahenyida Science & Technology</div>
+                </div>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="products.html">产品中心</a>
+                <a href="news.html" class="active">新闻中心</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>新闻中心</h2>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a><span>/</span>新闻中心
+            </div>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <section class="section bg-light">
+        <div class="container" style="max-width: 900px;">
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">15</div>
+                    <div class="month">2025-04</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">华恒鑫达参加第十五届中国国际核工业展览会</a></h4>
+                    <p>公司携最新核探测设备亮相第十五届中国国际核工业展览会，展示了Photonis光电倍增管、Cremat前置放大器、ELJEN闪烁体等多款代理品牌的先进产品。展会期间，公司与多家国内外企业进行了深入交流，获得业内广泛关注与好评。</p>
+                    <div class="meta">📁 公司动态 | 👁 238次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">20</div>
+                    <div class="month">2025-03</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">公司与法国Photonis达成深度合作协议</a></h4>
+                    <p>北京华恒鑫达与法国Photonis公司签署了新一轮深度合作协议，进一步巩固了双方在光电倍增管（PMT）、微通道板（MCP）、中子/伽马探测器（NGD）等产品线上的合作关系，将为国内客户提供更优质的产品和技术支持。</p>
+                    <div class="meta">📁 合作动态 | 👁 196次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">08</div>
+                    <div class="month">2025-01</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">ELJEN新型塑料闪烁体产品线正式引入</a></h4>
+                    <p>公司正式引入美国ELJEN公司的新型塑料闪烁体产品线，包括EJ-200、EJ-204、EJ-208等多个型号，可按照客户需求定制各种形状和尺寸。该系列产品具有高光输出、快衰减时间等优异性能。</p>
+                    <div class="meta">📁 产品资讯 | 👁 312次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">15</div>
+                    <div class="month">2024-11</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">华恒鑫达荣获"核工业优秀供应商"称号</a></h4>
+                    <p>在2024年度核工业供应商评选中，北京华恒鑫达科技发展有限公司凭借优质的产品质量和完善的售后服务，荣获"核工业优秀供应商"荣誉称号。这是对公司十余年来在核工业领域深耕细作的充分肯定。</p>
+                    <div class="meta">📁 公司荣誉 | 👁 420次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">01</div>
+                    <div class="month">2024-08</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">公司办公地址迁至石景山万达广场</a></h4>
+                    <p>为适应公司业务发展需要，华恒鑫达办公地址正式迁至北京市石景山区万达广场D座1015室。新办公地点交通便利，环境优越，将更好地服务于全国客户。</p>
+                    <div class="meta">📁 公司动态 | 👁 156次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">20</div>
+                    <div class="month">2024-05</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">Cremat前置放大器技术交流会在京成功举行</a></h4>
+                    <p>由华恒鑫达主办的Cremat电荷灵敏前置放大器技术交流会在北京顺利召开。会议邀请了美国Cremat公司技术专家进行专题报告，来自全国多家科研院所和高校的专家学者参加了此次交流活动。</p>
+                    <div class="meta">📁 技术交流 | 👁 187次浏览</div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date-box">
+                    <div class="day">10</div>
+                    <div class="month">2024-03</div>
+                </div>
+                <div class="news-info">
+                    <h4><a href="#">Micron半导体探测器产品培训圆满完成</a></h4>
+                    <p>英国Micron公司技术团队到访华恒鑫达，就硅微条探测器、硅(Li)探测器的技术参数、应用场景及安装调试等方面进行了系统培训，进一步提升了公司技术团队的专业服务能力。</p>
+                    <div class="meta">📁 技术交流 | 👁 145次浏览</div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>北京华恒鑫达科技发展有限公司</h4>
+                    <p>致力于为核工业研究及生产领域提供元器件和相关产品设备。代理多家国际知名品牌，以真诚、守信、服务周到为宗旨。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <a href="index.html">首页</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="products.html">产品中心</a>
+                    <a href="news.html">新闻中心</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <div class="footer-links">
+                    <h4>产品分类</h4>
+                    <a href="products.html">核探测器与元器件</a>
+                    <a href="products.html">核电子学设备</a>
+                    <a href="products.html">闪烁体及晶体</a>
+                    <a href="products.html">辐射监测设备</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <p>📍 北京市石景山区万达广场D座1015室</p>
+                    <p>📞 010-88258670 / 88258671</p>
+                    <p>📠 010-88696193</p>
+                    <p>📧 sales@wahenyida.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© <span id="currentYear">2025</span> 北京华恒鑫达科技发展有限公司 | 京ICP备XXXXXXXX号 | <a href="#">法律声明</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
+    <script>
+        const btn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 400 ? 'block' : 'none'; });
+        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

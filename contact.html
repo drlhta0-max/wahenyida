@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系我们 - 北京华恒鑫达科技发展有限公司，地址：北京市石景山区万达广场D座1015室，电话：010-88258670">
+    <title>联系我们 - 北京华恒鑫达科技发展有限公司</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #e8ecf1 0%, #d5dce4 100%);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--text-muted);
+            text-align: center;
+            gap: 8px;
+        }
+        .map-container .map-icon {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-contact">
+                <span>📞 010-88258670 / 88258671</span>
+                <span>📧 sales@wahenyida.com</span>
+                <span>📍 北京市石景山区万达广场D座1015室</span>
+            </div>
+            <div class="top-lang">
+                <a href="index.html">中文</a> | <a href="#">English</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">华</div>
+                <div class="logo-text">
+                    <h1>华恒鑫达</h1>
+                    <div class="subtitle">Wahenyida Science & Technology</div>
+                </div>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="products.html">产品中心</a>
+                <a href="news.html">新闻中心</a>
+                <a href="contact.html" class="active">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a><span>/</span>联系我们
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-card">
+                    <h3>联系方式</h3>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">📍</div>
+                        <div>
+                            <h5>公司地址</h5>
+                            <p>北京市石景山区万达广场D座1015室<br>邮编：100043</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">📞</div>
+                        <div>
+                            <h5>联系电话</h5>
+                            <p>010-88258670 / 010-88258671<br>18911834780</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">📠</div>
+                        <div>
+                            <h5>传真</h5>
+                            <p>010-88696193</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">📧</div>
+                        <div>
+                            <h5>电子邮箱</h5>
+                            <p>sales@wahenyida.com<br>weiwei@wahenyida.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">👤</div>
+                        <div>
+                            <h5>联系人</h5>
+                            <p>舒女士 / 魏小姐</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="ci-icon">🕐</div>
+                        <div>
+                            <h5>工作时间</h5>
+                            <p>周一至周五 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h3>在线留言</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>您的姓名 <span class="required">*</span></label>
+                                <input type="text" placeholder="请输入您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label>联系电话 <span class="required">*</span></label>
+                                <input type="tel" placeholder="请输入您的联系电话" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>电子邮箱</label>
+                            <input type="email" placeholder="请输入您的电子邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label>公司名称</label>
+                            <input type="text" placeholder="请输入您的公司名称">
+                        </div>
+                        <div class="form-group">
+                            <label>咨询类型</label>
+                            <select>
+                                <option value="">请选择咨询类型</option>
+                                <option value="product">产品咨询</option>
+                                <option value="quote">索取报价</option>
+                                <option value="tech">技术支持</option>
+                                <option value="cooperation">商务合作</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>留言内容 <span class="required">*</span></label>
+                            <textarea placeholder="请描述您的需求或问题..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">提交留言</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container" style="margin-top:40px;">
+                <div class="map-icon">🗺️</div>
+                <p><strong>北京市石景山区万达广场D座1015室</strong></p>
+                <p>地铁1号线八宝山站或八角游乐园站下车步行可达</p>
+                <p style="font-size:13px;">（实际地图需替换为百度地图/高德地图API）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>北京华恒鑫达科技发展有限公司</h4>
+                    <p>致力于为核工业研究及生产领域提供元器件和相关产品设备。代理多家国际知名品牌，以真诚、守信、服务周到为宗旨。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <a href="index.html">首页</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="products.html">产品中心</a>
+                    <a href="news.html">新闻中心</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <div class="footer-links">
+                    <h4>产品分类</h4>
+                    <a href="products.html">核探测器与元器件</a>
+                    <a href="products.html">核电子学设备</a>
+                    <a href="products.html">闪烁体及晶体</a>
+                    <a href="products.html">辐射监测设备</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <p>📍 北京市石景山区万达广场D座1015室</p>
+                    <p>📞 010-88258670 / 88258671</p>
+                    <p>📠 010-88696193</p>
+                    <p>📧 sales@wahenyida.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© <span id="currentYear">2025</span> 北京华恒鑫达科技发展有限公司 | 京ICP备XXXXXXXX号 | <a href="#">法律声明</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
+    <script>
+        const btn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 400 ? 'block' : 'none'; });
+        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
