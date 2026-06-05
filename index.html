@@ -14,9 +14,9 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-contact">
-                <span>📞 010-88258670 / 88258671</span>
-                <span>📧 sales@wahenyida.com</span>
-                <span>📍 北京市石景山区万达广场D座1015室</span>
+                <span>📞 <span data-cfg="contact.phone"></span></span>
+                <span>📧 <span data-cfg="contact.email"></span></span>
+                <span>📍 <span data-cfg="contact.address"></span></span>
             </div>
             <div class="top-lang">
                 <a href="index.html">中文</a> | <a href="#">English</a>
@@ -30,8 +30,8 @@
             <a href="index.html" class="logo">
                 <div class="logo-icon">华</div>
                 <div class="logo-text">
-                    <h1>华恒鑫达</h1>
-                    <div class="subtitle">Wahenyida Science & Technology</div>
+                    <h1 data-cfg="company.shortName"></h1>
+                    <div class="subtitle" data-cfg="company.enName"></div>
                 </div>
             </a>
             <div class="nav-toggle" id="navToggle">
@@ -51,8 +51,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>核工业探测设备<br>与元器件<span class="highlight">专业供应商</span></h2>
-                <p>北京华恒鑫达科技发展有限公司致力于为核工业研究及生产领域提供高品质元器件和相关产品设备，代理多家国际知名品牌，以真诚、守信、服务周到赢得客户信任。</p>
+                <h2 data-cfg-html="company.slogan"></h2>
+                <p data-cfg="introShort"></p>
                 <div class="hero-buttons">
                     <a href="products.html" class="btn btn-primary">查看产品</a>
                     <a href="contact.html" class="btn btn-outline">联系我们</a>
@@ -70,23 +70,9 @@
                     <div class="badge">成立于 2006 年</div>
                 </div>
                 <div class="about-text">
-                    <h3>关于华恒鑫达</h3>
-                    <p>北京华恒鑫达科技发展有限公司成立于2006年，是一家专注于核工业研究及生产领域的元器件和设备供应商。公司总部位于北京市石景山区万达广场，客户遍布全国各地。</p>
-                    <p>公司着力引进国际知名品牌产品，满足国内核工业研究和生产领域对元器件和设备在品质和性能上的高要求。我们以真诚、守信、服务周到为宗旨，致力于为客户提供最优质的产品和解决方案。</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="number">18+</div>
-                            <div class="label">年行业经验</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">6+</div>
-                            <div class="label">国际品牌代理</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="number">500+</div>
-                            <div class="label">服务客户</div>
-                        </div>
-                    </div>
+                    <h3>关于<span data-cfg="company.shortName"></span></h3>
+                    <div id="cfg-intro-full"></div>
+                    <div class="about-stats" id="cfg-stats"></div>
                 </div>
             </div>
         </div>
@@ -100,28 +86,7 @@
                 <div class="divider"></div>
                 <p>覆盖核探测与测量全领域，提供一站式解决方案</p>
             </div>
-            <div class="product-grid">
-                <a href="products.html" class="product-card">
-                    <div class="card-icon">🔬</div>
-                    <h4>核探测器与元器件</h4>
-                    <p>光电倍增管、微通道板、硅微条探测器、He3管、高纯锗探测器等</p>
-                </a>
-                <a href="products.html" class="product-card">
-                    <div class="card-icon">⚡</div>
-                    <h4>核电子学设备</h4>
-                    <p>电荷灵敏前置放大器、多道分析器、核电子学机箱和插件</p>
-                </a>
-                <a href="products.html" class="product-card">
-                    <div class="card-icon">💎</div>
-                    <h4>闪烁体及晶体</h4>
-                    <p>塑料闪烁体、液体闪烁体、NaI/CsI/BGO晶体、CLYC、CZT等</p>
-                </a>
-                <a href="products.html" class="product-card">
-                    <div class="card-icon">📡</div>
-                    <h4>辐射监测设备</h4>
-                    <p>环境辐射监测系统、便携式巡测仪、热释光剂量仪、表面污染测量仪</p>
-                </a>
-            </div>
+            <div class="product-grid" id="homeProducts"></div>
         </div>
     </section>
 
@@ -133,44 +98,7 @@
                 <div class="divider"></div>
                 <p>代理国际知名品牌，品质保障</p>
             </div>
-            <div class="brand-grid">
-                <div class="brand-card">
-                    <div class="brand-flag">🇫🇷</div>
-                    <div class="brand-name">Photonis</div>
-                    <div class="brand-country">法国</div>
-                    <div class="brand-desc">光电倍增管(PMT)、MCP、NGD、TOF探测器</div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-flag">🇺🇸</div>
-                    <div class="brand-name">Cremat</div>
-                    <div class="brand-country">美国</div>
-                    <div class="brand-desc">电荷灵敏前置放大器</div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-flag">🇺🇸</div>
-                    <div class="brand-name">ELJEN</div>
-                    <div class="brand-country">美国</div>
-                    <div class="brand-desc">塑料闪烁体、液体闪烁体及附件</div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-flag">🇬🇧</div>
-                    <div class="brand-name">Micron</div>
-                    <div class="brand-country">英国</div>
-                    <div class="brand-desc">硅条探测器</div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-flag">🇩🇪</div>
-                    <div class="brand-name">Mesytec</div>
-                    <div class="brand-country">德国</div>
-                    <div class="brand-desc">硅条/中子探测器前置放大器</div>
-                </div>
-                <div class="brand-card">
-                    <div class="brand-flag">🇩🇪</div>
-                    <div class="brand-name">Wissel</div>
-                    <div class="brand-country">德国</div>
-                    <div class="brand-desc">穆斯堡尔谱仪等核电子学仪器</div>
-                </div>
-            </div>
+            <div class="brand-grid" id="brandGrid"></div>
         </div>
     </section>
 
@@ -182,24 +110,11 @@
                 <div class="divider"></div>
                 <p>了解公司最新动态与行业资讯</p>
             </div>
-            <div class="news-grid">
-                <div class="news-main">
-                    <div class="img-placeholder">📰</div>
-                    <div class="news-body">
-                        <h4><a href="news.html">华恒鑫达参加第十五届中国国际核工业展览会</a></h4>
-                        <p>公司携最新核探测设备亮相展会，展示了多款代理品牌的先进产品，获得业内广泛关注。</p>
-                        <span class="date">2025-04-15</span>
-                    </div>
-                </div>
+            <div class="news-grid" id="homeNews">
+                <div class="news-main" id="newsMain"></div>
                 <div class="news-list">
                     <h3>最新动态</h3>
-                    <ul>
-                        <li><a href="news.html">公司与法国Photonis达成深度合作协议 <span class="date">2025-03-20</span></a></li>
-                        <li><a href="news.html">ELJEN新型塑料闪烁体产品线正式引入 <span class="date">2025-01-08</span></a></li>
-                        <li><a href="news.html">华恒鑫达荣获"核工业优秀供应商"称号 <span class="date">2024-11-15</span></a></li>
-                        <li><a href="news.html">公司搬迁至万达广场新办公地址 <span class="date">2024-08-01</span></a></li>
-                        <li><a href="news.html">Cremat前置放大器技术交流会在京举行 <span class="date">2024-05-20</span></a></li>
-                    </ul>
+                    <ul id="newsSideList"></ul>
                 </div>
             </div>
         </div>
@@ -210,8 +125,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h4>北京华恒鑫达科技发展有限公司</h4>
-                    <p>致力于为核工业研究及生产领域提供元器件和相关产品设备。代理多家国际知名品牌，以真诚、守信、服务周到为宗旨。</p>
+                    <h4 data-cfg="company.fullName"></h4>
+                    <p data-cfg="introShort"></p>
                 </div>
                 <div class="footer-links">
                     <h4>快速导航</h4>
@@ -230,16 +145,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4>联系我们</h4>
-                    <p>📍 北京市石景山区万达广场D座1015室</p>
-                    <p>📞 010-88258670 / 88258671</p>
-                    <p>📠 010-88696193</p>
-                    <p>📧 sales@wahenyida.com</p>
+                    <p>📍 <span data-cfg="contact.address"></span></p>
+                    <p>📞 <span data-cfg="contact.phone"></span></p>
+                    <p>📠 <span data-cfg="contact.fax"></span></p>
+                    <p>📧 <span data-cfg="contact.email"></span></p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>© <span id="currentYear">2025</span> 北京华恒鑫达科技发展有限公司 | 京ICP备XXXXXXXX号 | <a href="#">法律声明</a></p>
+                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
             </div>
         </div>
     </footer>
@@ -255,6 +170,52 @@
         });
         btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
     </script>
+    <script src="data/config.js"></script>
+    <script src="data/products.js"></script>
+    <script src="data/brands.js"></script>
+    <script src="data/news.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        (function() {
+            // 合作品牌
+            var brandGrid = document.getElementById('brandGrid');
+            BRANDS_DATA.forEach(function(b) {
+                var div = document.createElement('div');
+                div.className = 'brand-card';
+                div.innerHTML = '<div class="brand-flag">' + b.flag + '</div>' +
+                    '<div class="brand-name">' + b.name + '</div>' +
+                    '<div class="brand-country">' + b.country + '</div>' +
+                    '<div class="brand-desc">' + b.desc + '</div>';
+                brandGrid.appendChild(div);
+            });
+
+            // 产品卡片
+            var grid = document.getElementById('homeProducts');
+            PRODUCTS_DATA.filter(function(p) { return p.id !== 'accessories'; }).forEach(function(cat) {
+                var names = cat.items.slice(0,4).map(function(i) { return i.name; }).join('、');
+                var card = document.createElement('a');
+                card.href = 'products.html#' + cat.id;
+                card.className = 'product-card';
+                card.innerHTML = '<div class="card-icon">' + cat.icon + '</div><h4>' + cat.name + '</h4><p>' + names + '等</p>';
+                grid.appendChild(card);
+            });
+
+            // 新闻
+            var top = NEWS_DATA[0];
+            document.getElementById('newsMain').innerHTML =
+                '<div class="img-placeholder">📰</div>' +
+                '<div class="news-body">' +
+                    '<h4><a href="news.html">' + top.title + '</a></h4>' +
+                    '<p>' + top.desc + '</p>' +
+                    '<span class="date">' + top.date + '</span>' +
+                '</div>';
+            var list = document.getElementById('newsSideList');
+            NEWS_DATA.slice(0, 5).forEach(function(item) {
+                var li = document.createElement('li');
+                li.innerHTML = '<a href="news.html">' + item.title + ' <span class="date">' + item.date + '</span></a>';
+                list.appendChild(li);
+            });
+        })();
+    </script>
 </body>
 </html>

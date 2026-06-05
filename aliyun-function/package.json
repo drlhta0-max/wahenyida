@@ -1,0 +1,9 @@
+{
+  "name": "wahenyida-contact-form",
+  "version": "1.0.0",
+  "description": "阿里云函数计算 - 华恒鑫达网站留言表单",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  }
+}

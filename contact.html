@@ -32,9 +32,9 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-contact">
-                <span>📞 010-88258670 / 88258671</span>
-                <span>📧 sales@wahenyida.com</span>
-                <span>📍 北京市石景山区万达广场D座1015室</span>
+                <span>📞 <span data-cfg="contact.phone"></span></span>
+                <span>📧 <span data-cfg="contact.email"></span></span>
+                <span>📍 <span data-cfg="contact.address"></span></span>
             </div>
             <div class="top-lang">
                 <a href="index.html">中文</a> | <a href="#">English</a>
@@ -48,8 +48,8 @@
             <a href="index.html" class="logo">
                 <div class="logo-icon">华</div>
                 <div class="logo-text">
-                    <h1>华恒鑫达</h1>
-                    <div class="subtitle">Wahenyida Science & Technology</div>
+                    <h1 data-cfg="company.shortName"></h1>
+                    <div class="subtitle" data-cfg="company.enName"></div>
                 </div>
             </a>
             <div class="nav-toggle" id="navToggle">
@@ -80,56 +80,8 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Info -->
-                <div class="contact-info-card">
+                <div class="contact-info-card" id="cfg-contact-card">
                     <h3>联系方式</h3>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">📍</div>
-                        <div>
-                            <h5>公司地址</h5>
-                            <p>北京市石景山区万达广场D座1015室<br>邮编：100043</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">📞</div>
-                        <div>
-                            <h5>联系电话</h5>
-                            <p>010-88258670 / 010-88258671<br>18911834780</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">📠</div>
-                        <div>
-                            <h5>传真</h5>
-                            <p>010-88696193</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">📧</div>
-                        <div>
-                            <h5>电子邮箱</h5>
-                            <p>sales@wahenyida.com<br>weiwei@wahenyida.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">👤</div>
-                        <div>
-                            <h5>联系人</h5>
-                            <p>舒女士 / 魏小姐</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="ci-icon">🕐</div>
-                        <div>
-                            <h5>工作时间</h5>
-                            <p>周一至周五 9:00 - 18:00</p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Contact Form -->
@@ -139,24 +91,24 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>您的姓名 <span class="required">*</span></label>
-                                <input type="text" placeholder="请输入您的姓名" required>
+                                <input type="text" name="name" placeholder="请输入您的姓名" required>
                             </div>
                             <div class="form-group">
                                 <label>联系电话 <span class="required">*</span></label>
-                                <input type="tel" placeholder="请输入您的联系电话" required>
+                                <input type="tel" name="phone" placeholder="请输入您的联系电话" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>电子邮箱</label>
-                            <input type="email" placeholder="请输入您的电子邮箱">
+                            <input type="email" name="email" placeholder="请输入您的电子邮箱">
                         </div>
                         <div class="form-group">
                             <label>公司名称</label>
-                            <input type="text" placeholder="请输入您的公司名称">
+                            <input type="text" name="company" placeholder="请输入您的公司名称">
                         </div>
                         <div class="form-group">
                             <label>咨询类型</label>
-                            <select>
+                            <select name="type">
                                 <option value="">请选择咨询类型</option>
                                 <option value="product">产品咨询</option>
                                 <option value="quote">索取报价</option>
@@ -167,7 +119,7 @@
                         </div>
                         <div class="form-group">
                             <label>留言内容 <span class="required">*</span></label>
-                            <textarea placeholder="请描述您的需求或问题..." required></textarea>
+                            <textarea name="message" placeholder="请描述您的需求或问题..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width:100%;">提交留言</button>
                     </form>
@@ -175,12 +127,12 @@
             </div>
 
             <!-- Map -->
-            <div class="map-container" style="margin-top:40px;">
+            <a id="mapLink" href="#" target="_blank" class="map-container" style="display:block; margin-top:40px; text-decoration:none; cursor:pointer; transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='none';this.style.boxShadow='none';">
                 <div class="map-icon">🗺️</div>
-                <p><strong>北京市石景山区万达广场D座1015室</strong></p>
+                <p><strong data-cfg="contact.address"></strong></p>
                 <p>地铁1号线八宝山站或八角游乐园站下车步行可达</p>
-                <p style="font-size:13px;">（实际地图需替换为百度地图/高德地图API）</p>
-            </div>
+                <p style="color:var(--primary-light); font-size:13px; margin-top:4px;">📌 点击打开高德地图导航</p>
+            </a>
         </div>
     </section>
 
@@ -189,8 +141,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h4>北京华恒鑫达科技发展有限公司</h4>
-                    <p>致力于为核工业研究及生产领域提供元器件和相关产品设备。代理多家国际知名品牌，以真诚、守信、服务周到为宗旨。</p>
+                    <h4 data-cfg="company.fullName"></h4>
+                    <p data-cfg="introShort"></p>
                 </div>
                 <div class="footer-links">
                     <h4>快速导航</h4>
@@ -209,16 +161,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4>联系我们</h4>
-                    <p>📍 北京市石景山区万达广场D座1015室</p>
-                    <p>📞 010-88258670 / 88258671</p>
-                    <p>📠 010-88696193</p>
-                    <p>📧 sales@wahenyida.com</p>
+                    <p>📍 <span data-cfg="contact.address"></span></p>
+                    <p>📞 <span data-cfg="contact.phone"></span></p>
+                    <p>📠 <span data-cfg="contact.fax"></span></p>
+                    <p>📧 <span data-cfg="contact.email"></span></p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>© <span id="currentYear">2025</span> 北京华恒鑫达科技发展有限公司 | 京ICP备XXXXXXXX号 | <a href="#">法律声明</a></p>
+                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
             </div>
         </div>
     </footer>
@@ -230,6 +182,7 @@
         btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+    <script src="data/config.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
