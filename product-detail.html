@@ -64,7 +64,9 @@ var dc=document.getElementById('detailContent');
 if(!found){
     dc.innerHTML='<div class="notfound"><h2>产品未找到</h2><p>请返回<a href="products.html">产品中心</a>浏览更多产品。</p></div>';
 }else{
-    var images = found.images || [found.img];
+    // detail data, fallback to brief
+    var det = found.detail || { images: [found.brief.img], text: '<p>'+found.brief.desc+'</p>' };
+    var images = det.images;
     var thumbs = images.map(function(img,i){
         return '<img src="'+img+'" class="'+(i===0?'active':'')+'" onclick="switchImage('+i+')" alt="">';
     }).join('');
@@ -76,11 +78,7 @@ if(!found){
             '<div class="preview-box"><img src="'+images[0]+'" alt="'+found.name+'" id="previewImg"></div>'+
         '</div>'+
         '<div class="part-tit">产品详情</div>'+
-        '<div class="goods-cont">'+
-            '<p>'+found.desc+'。'+catInfo.desc+'</p>'+
-            '<p>四川科技作为专业核探测设备供应商，为您提供高品质的'+found.name+'产品。该产品属于'+catInfo.name+'类别，广泛应用于核物理实验、辐射探测、环境监测等领域。</p>'+
-            '<p>如需了解详细技术参数、获取报价或预约产品演示，欢迎联系我们的销售团队。我们将根据您的具体应用需求，为您推荐最合适的产品配置方案。</p>'+
-        '</div>'+
+        '<div class="goods-cont">'+det.text+'</div>'+
         '<div class="btn-contact"><a href="contact.html">联系我们</a></div>';
 
     window.switchImage = function(idx){

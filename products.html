@@ -75,7 +75,7 @@ PRODUCTS_DATA.forEach(function(cat){
     // Category section
     var sec=document.createElement('div');sec.id=cat.id;sec.className='cat-section';
     var cards=cat.items.map(function(item){
-        return '<a href="'+item.link+'" class="goods-card"><div class="goods-img-wrap"><img src="'+item.img+'" alt="'+item.name+'" loading="lazy"><div class="img-shade"></div></div><div class="goods-info"><p class="goods-tit">'+item.name+'</p><p class="goods-desc">'+item.desc+'</p></div></a>';
+        return '<a href="'+item.link+'" class="goods-card"><div class="goods-img-wrap"><img src="'+item.brief.img+'" alt="'+item.name+'" loading="lazy"><div class="img-shade"></div></div><div class="goods-info"><p class="goods-tit">'+item.name+'</p><p class="goods-desc">'+item.brief.desc+'</p></div></a>';
     }).join('');
     sec.innerHTML='<h3>'+cat.name+'</h3><div class="cat-en">'+cat.en+'</div><div class="cat-divider"></div><p class="cat-desc">'+cat.desc+'</p><div class="goods-grid">'+cards+'</div>';
     pc.appendChild(sec);
