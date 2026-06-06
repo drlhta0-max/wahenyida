@@ -80,7 +80,3 @@ contact: {
 | `images/prod/` | 产品图片 | 300×240 |
 
 ---
-
-## 部署
-
-整个文件夹上传到任意 Web 服务器（Nginx/Apache/OSS/GitHub Pages），无后端依赖。
