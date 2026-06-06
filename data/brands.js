@@ -1,38 +1,26 @@
 var BRANDS_DATA = [
-  {
-    "name": "Photonis",
-    "flag": "🇫🇷",
-    "country": "法国",
-    "desc": "光电倍增管(PMT)、MCP、NGD、TOF探测器"
-  },
-  {
-    "name": "Cremat",
-    "flag": "🇺🇸",
-    "country": "美国",
-    "desc": "电荷灵敏前置放大器"
-  },
-  {
-    "name": "ELJEN",
-    "flag": "🇺🇸",
-    "country": "美国",
-    "desc": "塑料闪烁体、液体闪烁体及附件"
-  },
-  {
-    "name": "Micron",
-    "flag": "🇬🇧",
-    "country": "英国",
-    "desc": "硅条探测器"
-  },
-  {
-    "name": "Mesytec",
-    "flag": "🇩🇪",
-    "country": "德国",
-    "desc": "硅条/中子探测器前置放大器"
-  },
-  {
-    "name": "Wissel",
-    "flag": "🇩🇪",
-    "country": "德国",
-    "desc": "穆斯堡尔谱仪等核电子学仪器"
-  }
+  {name:"ELSE NUCLEAR",image:"images/brand-1.png",country:"意大利",desc:"核电子学设备"},
+  {name:"ISEG",image:"images/brand-2.png",country:"德国",desc:"高压电源"},
+  {name:"MICRON",image:"images/brand-micron.png",country:"英国",desc:"硅条探测器"},
+  {name:"XIA",image:"images/brand-3.png",country:"美国",desc:"数字化仪"},
+  {name:"GBS",image:"images/brand-4.png",country:"德国",desc:"电子学"},
+  {name:"Pantechnik",image:"images/brand-5.png",country:"法国",desc:"离子源"},
+  {name:"ORTEC",image:"images/brand-ortec.png",country:"美国",desc:"核电子学"},
+  {name:"Quaesta",image:"images/brand-6.png",country:"瑞士",desc:"核仪器"},
+  {name:"ELJEN",image:"images/brand-eljen.png",country:"美国",desc:"闪烁体"},
+  {name:"MESYTEC",image:"images/brand-mesytec.png",country:"德国",desc:"前置放大器"},
+  {name:"Wiener",image:"images/brand-7.png",country:"德国",desc:"NIM/VME机箱"},
+  {name:"SCIONIX",image:"images/brand-8.png",country:"荷兰",desc:"闪烁晶体"},
+  {name:"PDT",image:"images/brand-9.png",country:"意大利",desc:"光电探测器"},
+  {name:"LND",image:"images/brand-10.png",country:"美国",desc:"核辐射探测器"},
+  {name:"Luxima Technology",image:"images/brand-11.png",country:"美国",desc:"光电探测器"},
+  {name:"Radmetron",image:"images/brand-12.png",country:"俄罗斯",desc:"辐射监测"},
+  {name:"ET",image:"images/brand-13.png",country:"美国",desc:"光电倍增管"},
+  {name:"TEVISO",image:"images/brand-14.png",country:"美国",desc:"辐射探测器"},
+  {name:"CREMAT",image:"images/brand-cremat.png",country:"美国",desc:"前置放大器"},
+  {name:"RDT",image:"images/brand-15.png",country:"美国",desc:"辐射探测"},
+  {name:"AHV",image:"images/brand-16.png",country:"美国",desc:"高压电源"},
+  {name:"VARADIS",image:"images/brand-17.png",country:"英国",desc:"闪烁体"},
+  {name:"Photonis",image:"images/brand-photonis.png",country:"法国",desc:"PMT/MCP"},
+  {name:"Wissel",image:"images/brand-wissel.png",country:"德国",desc:"穆斯堡尔谱仪"}
 ];

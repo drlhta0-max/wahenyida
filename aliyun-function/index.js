@@ -9,7 +9,7 @@
  *    SMTP_PORT      = 465
  *    SMTP_USER      = 你的发信地址
  *    SMTP_PASS      = 你的SMTP密码
- *    NOTIFY_EMAIL   = 接收通知的邮箱 (如 sales@wahenyida.com)
+ *    NOTIFY_EMAIL   = 接收通知的邮箱 (如 sales@sichuan-tech.com)
  * 4. 部署后会得到一个 HTTP 触发器地址
  * 5. 把 contact.html 里的表单 action 改成这个地址
  */

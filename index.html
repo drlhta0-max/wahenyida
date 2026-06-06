@@ -3,218 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="北京华恒鑫达科技发展有限公司 - 致力于为核工业研究及生产领域提供元器件和相关产品设备，代理Photonis、Cremat、ELJEN、Micron、Mesytec等国际知名品牌">
-    <meta name="keywords" content="华恒鑫达,核探测器,光电倍增管,PMT,微通道板,MCP,电荷灵敏前置放大器,塑料闪烁体,硅条探测器,中子探测器,辐射监测">
-    <title>北京华恒鑫达科技发展有限公司 - 核工业探测设备与元器件供应商</title>
+    <meta name="description" content="四川科技 - 核工业探测设备与元器件专业供应商，代理Photonis、Cremat、ELJEN、Micron、Mesytec等国际知名品牌">
+    <meta name="keywords" content="四川科技,核探测器,光电倍增管,PMT,闪烁体,中子探测器,辐射监测,核电子学">
+    <title>四川科技</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-contact">
-                <span>📞 <span data-cfg="contact.phone"></span></span>
-                <span>📧 <span data-cfg="contact.email"></span></span>
-                <span>📍 <span data-cfg="contact.address"></span></span>
-            </div>
-            <div class="top-lang">
-                <a href="index.html">中文</a> | <a href="#">English</a>
-            </div>
-        </div>
-    </div>
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">华</div>
-                <div class="logo-text">
-                    <h1 data-cfg="company.shortName"></h1>
-                    <div class="subtitle" data-cfg="company.enName"></div>
-                </div>
+                <img src="images/logo.png" alt="四川科技" style="height:52px;">
             </a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
             <nav class="nav" id="nav">
                 <a href="index.html" class="active">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="products.html">产品中心</a>
-                <a href="news.html">新闻中心</a>
-                <a href="contact.html">联系我们</a>
+                <div class="dropdown">
+                    <a href="products.html">产品中心</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html#cat1">闪烁体探测器</a>
+                        <a href="products.html#cat2">半导体探测器</a>
+                        <a href="products.html#cat3">金刚石探测器</a>
+                        <a href="products.html#cat4">气体探测器</a>
+                        <a href="products.html#cat5">电源/电子学</a>
+                        <a href="products.html#cat6">辐射检测设备</a>
+                        <a href="products.html#cat7">加速器相关设备</a>
+                        <a href="products.html#cat8">测试与服务</a>
+                        <a href="products.html#cat9">光学探测器</a>
+                        <a href="brands.html">品牌列表</a>
+                    </div>
+                </div>
+                <a href="news.html">行业新闻</a>
+                <a href="service.html">服务支持</a>
+                <div class="dropdown">
+                    <a href="about.html">关于我们</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html">公司简介</a>
+                        <a href="contact.html">联系我们</a>
+                        <a href="careers.html">人才招聘</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 data-cfg-html="company.slogan"></h2>
-                <p data-cfg="introShort"></p>
-                <div class="hero-buttons">
-                    <a href="products.html" class="btn btn-primary">查看产品</a>
-                    <a href="contact.html" class="btn btn-outline">联系我们</a>
-                </div>
-            </div>
-        </div>
+    <!-- Banner Slider -->
+    <section class="banner" id="banner">
+        <div class="slides" id="bannerSlides"></div>
+        <div class="banner-dots" id="bannerDots"></div>
     </section>
 
-    <!-- About Section -->
-    <section class="section bg-white" id="about">
+    <!-- 业务范围 -->
+    <section class="section">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="img-placeholder">🏢</div>
-                    <div class="badge">成立于 2006 年</div>
-                </div>
-                <div class="about-text">
-                    <h3>关于<span data-cfg="company.shortName"></span></h3>
-                    <div id="cfg-intro-full"></div>
-                    <div class="about-stats" id="cfg-stats"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Categories -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>产品中心</h2>
+            <div class="section-title">
+                <h2>业务范围</h2>
                 <div class="divider"></div>
-                <p>覆盖核探测与测量全领域，提供一站式解决方案</p>
+                <div class="en">SCOPE OF BUSINESS</div>
             </div>
-            <div class="product-grid" id="homeProducts"></div>
+            <div class="section-subtitle">
+                公司的业务涉及全国各领域，安防、医疗、电子、环保、航天、考古、矿业、石油、质检等社会各行各业。着力引进国内外高技术产品，以满足国内各领域对探测器、电子学及设备在品质和性能上的高要求。
+            </div>
+            <div class="sectors-grid" id="homeSectors"></div>
         </div>
     </section>
 
-    <!-- Brand Partners -->
-    <section class="section bg-white">
+    <!-- CTA Banner -->
+    <section class="cta-banner">
         <div class="container">
-            <div class="section-header">
-                <h2>合作品牌</h2>
-                <div class="divider"></div>
-                <p>代理国际知名品牌，品质保障</p>
-            </div>
-            <div class="brand-grid" id="brandGrid"></div>
+            <h3>为客户提供专业化设计和定制服务</h3>
+            <p>我们可以为您设计并定制测量微弱信号的探测器系统，提供装置所需的高低压电源系统，提供进口成套辐射监测系统及设备。</p>
         </div>
     </section>
 
-    <!-- News Section -->
-    <section class="section bg-light">
+    <!-- 品牌列表 -->
+    <section class="section brand-section">
         <div class="container">
-            <div class="section-header">
-                <h2>新闻中心</h2>
+            <div class="section-title">
+                <h2>品牌列表</h2>
                 <div class="divider"></div>
-                <p>了解公司最新动态与行业资讯</p>
+                <div class="en">BRAND LIST</div>
             </div>
-            <div class="news-grid" id="homeNews">
-                <div class="news-main" id="newsMain"></div>
-                <div class="news-list">
-                    <h3>最新动态</h3>
-                    <ul id="newsSideList"></ul>
-                </div>
+            <div class="brand-slider" id="homeBrands"></div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="section products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品展示</h2>
+                <div class="divider"></div>
+                <div class="en">PRODUCT DISPLAY</div>
+            </div>
+            <div class="product-showcase" id="homeProducts"></div>
+            <div style="text-align:center; margin-top:32px;">
+                <a href="products.html" class="btn">查看更多 &gt;&gt;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about-section">
+        <div class="about-split">
+            <div class="about-img"></div>
+            <div class="about-content">
+                <h3>关于我们</h3>
+                <div class="en">ABOUT US</div>
+                <p>四川科技从2000年开始致力于引进高能物理、核物理和原子物理研究以及核工业和核监测领域所需国外先进元器件和设备。多年来，公司的用户已遍布全国各地，并且延伸到了安防、医疗、电子、环保、航天、食品、考古、矿业、石油、质检等社会各行各业。</p>
+                <p>因真诚、守信、服务周到而赢得客户的信任。我们一直深信，产品质量与服务是企业发展的基石。经过多年行业积累，我公司可以为用户设计和定制微弱信号、射线、粒子、光子、核子的探测系统，以及装置所需的高低压电源系统。</p>
+                <p>着眼于未来，公司将坚持以用户需求为工作重心，不断引进高品质的产品，凭借丰富的经验和完善的服务，以及雄厚的实力，继续在核探测器、核电子学及设备的领域里保持国内领先地位。</p>
+                <a href="about.html" class="btn">查看更多 &gt;&gt;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业新闻 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>行业新闻</h2>
+                <div class="divider"></div>
+                <div class="en">TRADE NEWS</div>
+            </div>
+            <div class="section-subtitle">宇宙、世界的万事万物，在物理学大类里分成很多小类，有宇宙学、天文学、生物力学、凝聚态物理、核物理，再有基本粒子物理。</div>
+            <div class="news-grid" id="homeNews"></div>
+            <div style="text-align:center; margin-top:32px;">
+                <a href="news.html" class="btn">查看更多 &gt;&gt;</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h4 data-cfg="company.fullName"></h4>
-                    <p data-cfg="introShort"></p>
-                </div>
-                <div class="footer-links">
-                    <h4>快速导航</h4>
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="products.html">产品中心</a>
-                    <a href="news.html">新闻中心</a>
-                    <a href="contact.html">联系我们</a>
-                </div>
-                <div class="footer-links">
-                    <h4>产品分类</h4>
-                    <a href="products.html">核探测器与元器件</a>
-                    <a href="products.html">核电子学设备</a>
-                    <a href="products.html">闪烁体及晶体</a>
-                    <a href="products.html">辐射监测设备</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>联系我们</h4>
-                    <p>📍 <span data-cfg="contact.address"></span></p>
-                    <p>📞 <span data-cfg="contact.phone"></span></p>
-                    <p>📠 <span data-cfg="contact.fax"></span></p>
-                    <p>📧 <span data-cfg="contact.email"></span></p>
-                </div>
+        <div class="footer-top">
+            <a href="products.html">产品中心</a>
+            <a href="about.html">关于我们</a>
+            <a href="careers.html">人才招聘</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+        <div class="container footer-mid">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="" style="height:48px;">
+                <span class="name">四川科技</span>
+            </div>
+            <div class="footer-tel">
+                服务热线：<span>（010）88258670 / 71 / 72</span>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
-                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
-            </div>
+            Copyright &copy; <span id="currentYear">2025</span> 四川科技 All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13014254号</a>
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
-    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
+    <button id="scrollTopBtn">↑</button>
 
-    <script>
-        // Scroll to top button
-        const btn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            btn.style.display = window.scrollY > 400 ? 'block' : 'none';
-        });
-        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-    </script>
     <script src="data/config.js"></script>
     <script src="data/products.js"></script>
     <script src="data/brands.js"></script>
     <script src="data/news.js"></script>
+    <script src="data/sectors.js"></script>
     <script src="js/main.js"></script>
     <script>
-        (function() {
-            // 合作品牌
-            var brandGrid = document.getElementById('brandGrid');
-            BRANDS_DATA.forEach(function(b) {
+        (function(){
+            // ===== Banner Slider =====
+            var banners = [
+                {img:'images/banner-1.png', title:'BONNER SPHERES SPECTROMETER'},
+                {img:'images/banner-2.png', title:'核探测设备'},
+                {img:'images/banner-3.png', title:'低本底测量'},
+                {img:'images/banner-4.png', title:'辐射监测系统'},
+                {img:'images/banner-5.png', title:'闪烁体探测器'},
+                {img:'images/banner-6.png', title:'核电子学设备'}
+            ];
+            var slidesHtml = '', dotsHtml = '';
+            banners.forEach(function(b, i){
+                slidesHtml += '<div class="slide" style="background-image:url('+b.img+')"><a href="products.html" title="'+b.title+'"></a></div>';
+                dotsHtml += '<span data-idx="'+i+'"></span>';
+            });
+            document.getElementById('bannerSlides').innerHTML = slidesHtml;
+            document.getElementById('bannerDots').innerHTML = dotsHtml;
+            var curSlide = 0, totalSlides = banners.length;
+            var slidesEl = document.getElementById('bannerSlides');
+            var dots = document.querySelectorAll('#bannerDots span');
+            dots[0].classList.add('active');
+            function goSlide(n) {
+                curSlide = n;
+                slidesEl.style.transform = 'translateX(-'+(curSlide*100)+'%)';
+                dots.forEach(function(d,i){ d.classList.toggle('active', i===curSlide); });
+            }
+            dots.forEach(function(d){
+                d.addEventListener('click', function(){ goSlide(parseInt(this.dataset.idx)); });
+            });
+            setInterval(function(){ goSlide((curSlide+1)%totalSlides); }, 5000);
+
+            // ===== Business Sectors =====
+            var sc = document.getElementById('homeSectors');
+            var sectorNames = ['航天','科研','核电','环保'];
+            var sectorIcons = ['🚀','🔬','⚛️','🌿'];
+            var sectorDescs = [
+                '我们以高性能探测器助力我国伟大的航天事业。',
+                '我们力争为中国核物理、高能物理等领域的基础科研工作贡献长久力量。',
+                '核电安全无小事，关注安全就是关注生命，助力核电安全我们在行动。',
+                '我们始终响应"绿水青山就是金山银山"的国家号召，助力环境监测。'
+            ];
+            sectorNames.forEach(function(n,i){
                 var div = document.createElement('div');
-                div.className = 'brand-card';
-                div.innerHTML = '<div class="brand-flag">' + b.flag + '</div>' +
-                    '<div class="brand-name">' + b.name + '</div>' +
-                    '<div class="brand-country">' + b.country + '</div>' +
-                    '<div class="brand-desc">' + b.desc + '</div>';
-                brandGrid.appendChild(div);
+                div.className = 'sector-item';
+                div.innerHTML = '<div class="sector-img">'+sectorIcons[i]+'</div><h4>'+n+'</h4><p>'+sectorDescs[i]+'</p>';
+                sc.appendChild(div);
             });
 
-            // 产品卡片
-            var grid = document.getElementById('homeProducts');
-            PRODUCTS_DATA.filter(function(p) { return p.id !== 'accessories'; }).forEach(function(cat) {
-                var names = cat.items.slice(0,4).map(function(i) { return i.name; }).join('、');
-                var card = document.createElement('a');
-                card.href = 'products.html#' + cat.id;
-                card.className = 'product-card';
-                card.innerHTML = '<div class="card-icon">' + cat.icon + '</div><h4>' + cat.name + '</h4><p>' + names + '等</p>';
-                grid.appendChild(card);
+            // ===== Brand Slider =====
+            var bg = document.getElementById('homeBrands');
+            var brandGroups = [];
+            for(var i=0; i<BRANDS_DATA.length; i+=9) {
+                brandGroups.push(BRANDS_DATA.slice(i, i+9));
+            }
+            brandGroups.forEach(function(group){
+                var gdiv = document.createElement('div');
+                gdiv.className = 'brand-group';
+                group.forEach(function(b){
+                    var card = document.createElement('div');
+                    card.className = 'brand-card';
+                    card.innerHTML = '<div class="brand-img"><img src="'+b.image+'" alt="'+b.name+'"></div><div class="brand-name">'+b.name+'</div>';
+                    gdiv.appendChild(card);
+                });
+                bg.appendChild(gdiv);
             });
 
-            // 新闻
-            var top = NEWS_DATA[0];
-            document.getElementById('newsMain').innerHTML =
-                '<div class="img-placeholder">📰</div>' +
-                '<div class="news-body">' +
-                    '<h4><a href="news.html">' + top.title + '</a></h4>' +
-                    '<p>' + top.desc + '</p>' +
-                    '<span class="date">' + top.date + '</span>' +
-                '</div>';
-            var list = document.getElementById('newsSideList');
-            NEWS_DATA.slice(0, 5).forEach(function(item) {
-                var li = document.createElement('li');
-                li.innerHTML = '<a href="news.html">' + item.title + ' <span class="date">' + item.date + '</span></a>';
-                list.appendChild(li);
+            // ===== Product Showcase =====
+            var hp = document.getElementById('homeProducts');
+            var showcaseProducts = [
+                {name:'多球中子谱仪', img:'images/product-showcase-1.png'},
+                {name:'UltraLo-1800超低本底α计数器', img:'images/product-showcase-2.png'},
+                {name:'多通道台式数字化仪 Pixie Link', img:'images/product-showcase-3.png'},
+                {name:'EHR 系列高压电源', img:'images/product-showcase-4.png'}
+            ];
+            showcaseProducts.forEach(function(p){
+                var item = document.createElement('a');
+                item.href = 'products.html';
+                item.className = 'product-item';
+                item.innerHTML = '<img src="'+p.img+'" alt="'+p.name+'"><div class="pname">'+p.name+'</div>';
+                hp.appendChild(item);
             });
+
+            // ===== News =====
+            var hn = document.getElementById('homeNews');
+            NEWS_DATA.slice(0,3).forEach(function(n){
+                var art = document.createElement('article');
+                art.className = 'news-item';
+                art.innerHTML = '<div class="news-img" style="background-image:url('+n.thumb+')"></div>'+
+                    '<div class="news-body"><h4><a href="news-detail.html?id='+n.id+'">'+n.title+'</a></h4>'+
+                    '<div class="time">'+n.date+'</div>'+
+                    '<div class="excerpt">'+n.desc+'</div></div>';
+                hn.appendChild(art);
+            });
+
+            // ===== Scroll to top =====
+            var btn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', function(){ btn.style.display = window.scrollY>400?'block':'none'; });
+            btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         })();
     </script>
 </body>

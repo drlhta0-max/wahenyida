@@ -1,197 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="新闻中心 - 北京华恒鑫达科技发展有限公司最新动态与行业资讯">
-    <title>新闻中心 - 北京华恒鑫达科技发展有限公司</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .news-card {
-            background: var(--bg-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: var(--transition);
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-        }
-        .news-card:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
-        }
-        .news-card .news-date-box {
-            background: var(--primary);
-            color: #fff;
-            border-radius: 8px;
-            padding: 12px 16px;
-            text-align: center;
-            min-width: 70px;
-            flex-shrink: 0;
-        }
-        .news-card .news-date-box .day {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1;
-        }
-        .news-card .news-date-box .month {
-            font-size: 13px;
-            margin-top: 4px;
-        }
-        .news-card .news-info h4 {
-            font-size: 18px;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-        .news-card .news-info h4 a {
-            color: var(--primary);
-        }
-        .news-card .news-info h4 a:hover {
-            color: var(--accent);
-        }
-        .news-card .news-info p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-bottom: 8px;
-        }
-        .news-card .news-info .meta {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        @media (max-width: 600px) {
-            .news-card {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="行业新闻 - 四川科技">
+<title>行业新闻 - 四川科技</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.news-list-page { max-width:900px; margin:0 auto; }
+.news-item-card { display:flex; gap:24px; background:#fff; border-radius:4px; padding:24px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); transition:all 0.3s ease; cursor:pointer; }
+.news-item-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.12); transform:translateY(-2px); }
+.news-item-card .news-thumb { width:260px; height:180px; flex-shrink:0; border-radius:4px; overflow:hidden; }
+.news-item-card .news-thumb img { width:100%; height:100%; object-fit:cover; }
+.news-item-card .news-body { flex:1; display:flex; flex-direction:column; }
+.news-item-card .news-body h4 { font-size:18px; color:#12212f; margin-bottom:8px; }
+.news-item-card .news-body h4 a { color:#12212f; }
+.news-item-card .news-body h4 a:hover { color:#ffad00; }
+.news-item-card .news-body .meta { font-size:12px; color:#999; margin-bottom:12px; }
+.news-item-card .news-body .meta span { margin-right:16px; }
+.news-item-card .news-body .excerpt { font-size:14px; color:#666; line-height:1.8; flex:1; }
+.news-item-card .news-body .readmore { color:#ffad00; font-size:13px; margin-top:8px; }
+@media(max-width:768px){.news-item-card{flex-direction:column}.news-item-card .news-thumb{width:100%;height:200px}}
+</style>
 </head>
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-contact">
-                <span>📞 <span data-cfg="contact.phone"></span></span>
-                <span>📧 <span data-cfg="contact.email"></span></span>
-                <span>📍 <span data-cfg="contact.address"></span></span>
-            </div>
-            <div class="top-lang">
-                <a href="index.html">中文</a> | <a href="#">English</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">华</div>
-                <div class="logo-text">
-                    <h1 data-cfg="company.shortName"></h1>
-                    <div class="subtitle" data-cfg="company.enName"></div>
-                </div>
-            </a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span><span></span><span></span>
-            </div>
-            <nav class="nav" id="nav">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="products.html">产品中心</a>
-                <a href="news.html" class="active">新闻中心</a>
-                <a href="contact.html">联系我们</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>新闻中心</h2>
-            <div class="breadcrumb">
-                <a href="index.html">首页</a><span>/</span>新闻中心
-            </div>
-        </div>
-    </section>
-
-    <!-- News Content -->
-    <section class="section bg-light">
-        <div class="container" style="max-width: 900px;" id="newsList"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h4 data-cfg="company.fullName"></h4>
-                    <p data-cfg="introShort"></p>
-                </div>
-                <div class="footer-links">
-                    <h4>快速导航</h4>
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="products.html">产品中心</a>
-                    <a href="news.html">新闻中心</a>
-                    <a href="contact.html">联系我们</a>
-                </div>
-                <div class="footer-links">
-                    <h4>产品分类</h4>
-                    <a href="products.html">核探测器与元器件</a>
-                    <a href="products.html">核电子学设备</a>
-                    <a href="products.html">闪烁体及晶体</a>
-                    <a href="products.html">辐射监测设备</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>联系我们</h4>
-                    <p>📍 <span data-cfg="contact.address"></span></p>
-                    <p>📞 <span data-cfg="contact.phone"></span></p>
-                    <p>📠 <span data-cfg="contact.fax"></span></p>
-                    <p>📧 <span data-cfg="contact.email"></span></p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
-    <script>
-        const btn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 400 ? 'block' : 'none'; });
-        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-    <script src="data/config.js"></script>
-    <script src="data/news.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        (function() {
-            const container = document.getElementById('newsList');
-            NEWS_DATA.forEach(function(item) {
-                const d = new Date(item.date);
-                const article = document.createElement('article');
-                article.className = 'news-card';
-                article.innerHTML =
-                    '<div class="news-date-box">' +
-                        '<div class="day">' + d.getDate().toString().padStart(2,'0') + '</div>' +
-                        '<div class="month">' + d.getFullYear() + '-' + (d.getMonth()+1).toString().padStart(2,'0') + '</div>' +
-                    '</div>' +
-                    '<div class="news-info">' +
-                        '<h4><a href="#">' + item.title + '</a></h4>' +
-                        '<p>' + item.desc + '</p>' +
-                        '<div class="meta">📁 ' + item.category + ' | 👁 ' + item.views + '次浏览</div>' +
-                    '</div>';
-                container.appendChild(article);
-            });
-        })();
-    </script>
+<header class="header"><div class="container">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="四川科技" style="height:52px;"></a>
+<div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+<nav class="nav" id="nav">
+<a href="index.html">首页</a>
+<div class="dropdown"><a href="products.html">产品中心</a><div class="dropdown-menu"><a href="products.html#cat1">闪烁体探测器</a><a href="products.html#cat2">半导体探测器</a><a href="products.html#cat3">金刚石探测器</a><a href="products.html#cat4">气体探测器</a><a href="products.html#cat5">电源/电子学</a><a href="products.html#cat6">辐射检测设备</a><a href="products.html#cat7">加速器相关设备</a><a href="products.html#cat8">测试与服务</a><a href="products.html#cat9">光学探测器</a><a href="brands.html">品牌列表</a></div></div>
+<a href="news.html" class="active">行业新闻</a>
+<a href="service.html">服务支持</a>
+<div class="dropdown"><a href="about.html">关于我们</a><div class="dropdown-menu"><a href="about.html">公司简介</a><a href="contact.html">联系我们</a><a href="careers.html">人才招聘</a></div></div>
+</nav></div></header>
+<section class="page-banner"><div class="container"><h2>行业新闻</h2><div class="breadcrumb"><a href="index.html">首页</a><span>/</span>行业新闻</div></div></section>
+<section class="section"><div class="container"><div class="news-list-page" id="newsList"></div></div></section>
+<footer class="footer"><div class="footer-top"><a href="products.html">产品中心</a><a href="about.html">关于我们</a><a href="careers.html">人才招聘</a><a href="contact.html">联系我们</a></div><div class="container footer-mid"><div class="footer-logo"><img src="images/logo.png" alt="" style="height:48px;"><span class="name">四川科技</span></div><div class="footer-tel">服务热线：<span>（010）88258670 / 71 / 72</span></div></div><div class="footer-bottom">Copyright &copy; <span id="cy">2025</span> 四川科技 All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13014254号</a></div></footer>
+<button id="scrollTopBtn" style="display:none;position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:#12212f;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:20px;z-index:999;">↑</button>
+<script src="data/config.js"></script>
+<script src="data/news.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+var nl=document.getElementById('newsList');
+NEWS_DATA.forEach(function(item,i){
+var art=document.createElement('article');
+art.className='news-item-card';
+art.innerHTML='<div class="news-thumb"><img src="'+item.thumb+'" alt="'+item.title+'" loading="lazy"></div><div class="news-body"><h4><a href="news-detail.html?id='+item.id+'">'+item.title+'</a></h4><div class="meta"><span>'+item.date+'</span><span>'+item.category+'</span><span>'+item.views+'次浏览</span></div><div class="excerpt">'+item.desc+'</div><a href="news-detail.html?id='+item.id+'" class="readmore">阅读全文 >></a></div>';
+nl.appendChild(art);
+});
+document.getElementById('cy').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>

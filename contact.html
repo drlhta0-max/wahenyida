@@ -1,188 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="联系我们 - 北京华恒鑫达科技发展有限公司，地址：北京市石景山区万达广场D座1015室，电话：010-88258670">
-    <title>联系我们 - 北京华恒鑫达科技发展有限公司</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .map-container {
-            width: 100%;
-            height: 350px;
-            background: linear-gradient(135deg, #e8ecf1 0%, #d5dce4 100%);
-            border-radius: var(--radius);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: var(--text-muted);
-            text-align: center;
-            gap: 8px;
-        }
-        .map-container .map-icon {
-            font-size: 48px;
-        }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="联系我们 - 四川科技，地址：北京市石景山区万达广场D座1015室">
+<title>联系我们 - 四川科技</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="四川科技" style="height:52px;"></a>
+<div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+<nav class="nav" id="nav">
+<a href="index.html">首页</a>
+<div class="dropdown"><a href="products.html">产品中心</a><div class="dropdown-menu"><a href="products.html#cat1">闪烁体探测器</a><a href="products.html#cat2">半导体探测器</a><a href="products.html#cat3">金刚石探测器</a><a href="products.html#cat4">气体探测器</a><a href="products.html#cat5">电源/电子学</a><a href="products.html#cat6">辐射检测设备</a><a href="products.html#cat7">加速器相关设备</a><a href="products.html#cat8">测试与服务</a><a href="products.html#cat9">光学探测器</a><a href="brands.html">品牌列表</a></div></div>
+<a href="news.html">行业新闻</a>
+<a href="service.html">服务支持</a>
+<div class="dropdown"><a href="about.html" class="active">关于我们</a><div class="dropdown-menu"><a href="about.html">公司简介</a><a href="contact.html">联系我们</a><a href="careers.html">人才招聘</a></div></div>
+</nav></div></header>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-contact">
-                <span>📞 <span data-cfg="contact.phone"></span></span>
-                <span>📧 <span data-cfg="contact.email"></span></span>
-                <span>📍 <span data-cfg="contact.address"></span></span>
-            </div>
-            <div class="top-lang">
-                <a href="index.html">中文</a> | <a href="#">English</a>
-            </div>
-        </div>
-    </div>
+<section class="page-banner"><div class="container"><h2>联系我们</h2><div class="breadcrumb"><a href="index.html">首页</a><span>/</span>联系我们</div></div></section>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">华</div>
-                <div class="logo-text">
-                    <h1 data-cfg="company.shortName"></h1>
-                    <div class="subtitle" data-cfg="company.enName"></div>
-                </div>
-            </a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span><span></span><span></span>
-            </div>
-            <nav class="nav" id="nav">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="products.html">产品中心</a>
-                <a href="news.html">新闻中心</a>
-                <a href="contact.html" class="active">联系我们</a>
-            </nav>
-        </div>
-    </header>
+<section class="section"><div class="container">
+<div class="contact-grid">
+<div class="contact-info-card"><h3>联系方式</h3>
+<div id="contactInfo"></div></div>
+<div class="contact-form-card"><h3>在线留言</h3>
+<form id="contactForm">
+<div class="form-row"><div class="form-group"><label>您的姓名 <span class="required">*</span></label><input type="text" name="name" required placeholder="请输入您的姓名"></div><div class="form-group"><label>联系电话 <span class="required">*</span></label><input type="tel" name="phone" required placeholder="请输入您的联系电话"></div></div>
+<div class="form-group"><label>电子邮箱</label><input type="email" name="email" placeholder="请输入您的电子邮箱"></div>
+<div class="form-group"><label>公司名称</label><input type="text" name="company" placeholder="请输入您的公司名称"></div>
+<div class="form-group"><label>咨询类型</label><select name="type"><option value="">请选择咨询类型</option><option value="product">产品咨询</option><option value="quote">索取报价</option><option value="tech">技术支持</option><option value="cooperation">商务合作</option><option value="other">其他</option></select></div>
+<div class="form-group"><label>留言内容 <span class="required">*</span></label><textarea name="message" required placeholder="请描述您的需求或问题..."></textarea></div>
+<button type="submit" class="btn btn-gold" style="width:100%;">提交留言</button>
+</form></div>
+</div>
+<a class="map-box" href="https://api.map.baidu.com/marker?location=39.9055,116.217&amp;title=四川科技&amp;content=北京市石景山区万达广场D座1015室&amp;output=html" target="_blank"><img src="images/map.png" alt="公司地图"></a></div></section>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>联系我们</h2>
-            <div class="breadcrumb">
-                <a href="index.html">首页</a><span>/</span>联系我们
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+<div class="footer-top"><a href="products.html">产品中心</a><a href="about.html">关于我们</a><a href="careers.html">人才招聘</a><a href="contact.html">联系我们</a></div>
+<div class="container footer-mid"><div class="footer-logo"><img src="images/logo.png" alt="" style="height:48px;"><span class="name">四川科技</span></div><div class="footer-tel">服务热线：<span>（010）88258670 / 71 / 72</span></div></div>
+<div class="footer-bottom">Copyright &copy; <span id="cy">2025</span> 四川科技 All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13014254号</a></div>
+</footer>
 
-    <!-- Contact Content -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Info -->
-                <div class="contact-info-card" id="cfg-contact-card">
-                    <h3>联系方式</h3>
-                </div>
+<button id="scrollTopBtn" style="display:none;position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:#12212f;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:20px;z-index:999;">↑</button>
 
-                <!-- Contact Form -->
-                <div class="contact-form-card">
-                    <h3>在线留言</h3>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>您的姓名 <span class="required">*</span></label>
-                                <input type="text" name="name" placeholder="请输入您的姓名" required>
-                            </div>
-                            <div class="form-group">
-                                <label>联系电话 <span class="required">*</span></label>
-                                <input type="tel" name="phone" placeholder="请输入您的联系电话" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>电子邮箱</label>
-                            <input type="email" name="email" placeholder="请输入您的电子邮箱">
-                        </div>
-                        <div class="form-group">
-                            <label>公司名称</label>
-                            <input type="text" name="company" placeholder="请输入您的公司名称">
-                        </div>
-                        <div class="form-group">
-                            <label>咨询类型</label>
-                            <select name="type">
-                                <option value="">请选择咨询类型</option>
-                                <option value="product">产品咨询</option>
-                                <option value="quote">索取报价</option>
-                                <option value="tech">技术支持</option>
-                                <option value="cooperation">商务合作</option>
-                                <option value="other">其他</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>留言内容 <span class="required">*</span></label>
-                            <textarea name="message" placeholder="请描述您的需求或问题..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;">提交留言</button>
-                    </form>
-                </div>
-            </div>
+<script src="data/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+var ct=SITE_CONFIG.contact;
+var items=[
+{icon:'📍',title:'公司地址',text:ct.address+'<br>邮编：'+ct.zip},
+{icon:'📞',title:'联系电话',text:ct.phone+'<br>手机：'+ct.mobile},
+{icon:'📠',title:'传真',text:ct.fax},
+{icon:'📧',title:'电子邮箱',text:ct.email+'<br>'+ct.email2},
+{icon:'👤',title:'联系人',text:ct.contactPerson},
+{icon:'🕐',title:'工作时间',text:ct.workHours}
+];
+var ci=document.getElementById('contactInfo');
+items.forEach(function(item){
+var div=document.createElement('div');div.className='contact-item';
+div.innerHTML='<div class="ci-icon">'+item.icon+'</div><div><h5>'+item.title+'</h5><p>'+item.text+'</p></div>';
+ci.appendChild(div);
+});
 
-            <!-- Map -->
-            <a id="mapLink" href="#" target="_blank" class="map-container" style="display:block; margin-top:40px; text-decoration:none; cursor:pointer; transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='none';this.style.boxShadow='none';">
-                <div class="map-icon">🗺️</div>
-                <p><strong data-cfg="contact.address"></strong></p>
-                <p>地铁1号线八宝山站或八角游乐园站下车步行可达</p>
-                <p style="color:var(--primary-light); font-size:13px; margin-top:4px;">📌 点击打开高德地图导航</p>
-            </a>
-        </div>
-    </section>
+var form=document.getElementById('contactForm');
+form.addEventListener('submit',function(e){
+e.preventDefault();
+var btn=form.querySelector('button');var orig=btn.textContent;
+btn.textContent='提交中...';btn.disabled=true;
+setTimeout(function(){
+alert('您的留言已提交成功！我们会尽快与您联系。');
+form.reset();btn.textContent=orig;btn.disabled=false;
+},500);
+});
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h4 data-cfg="company.fullName"></h4>
-                    <p data-cfg="introShort"></p>
-                </div>
-                <div class="footer-links">
-                    <h4>快速导航</h4>
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="products.html">产品中心</a>
-                    <a href="news.html">新闻中心</a>
-                    <a href="contact.html">联系我们</a>
-                </div>
-                <div class="footer-links">
-                    <h4>产品分类</h4>
-                    <a href="products.html">核探测器与元器件</a>
-                    <a href="products.html">核电子学设备</a>
-                    <a href="products.html">闪烁体及晶体</a>
-                    <a href="products.html">辐射监测设备</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>联系我们</h4>
-                    <p>📍 <span data-cfg="contact.address"></span></p>
-                    <p>📞 <span data-cfg="contact.phone"></span></p>
-                    <p>📠 <span data-cfg="contact.fax"></span></p>
-                    <p>📧 <span data-cfg="contact.email"></span></p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
-    <script>
-        const btn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 400 ? 'block' : 'none'; });
-        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-    <script src="data/config.js"></script>
-    <script src="js/main.js"></script>
+document.getElementById('cy').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>

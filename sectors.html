@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="业务领域 - 四川科技">
+<title>业务领域 - 四川科技</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="四川科技" style="height:52px;"></a>
+<div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+<nav class="nav" id="nav">
+<a href="index.html">首页</a>
+<div class="dropdown"><a href="products.html">产品中心</a><div class="dropdown-menu"><a href="products.html#cat1">闪烁体探测器</a><a href="products.html#cat2">半导体探测器</a><a href="products.html#cat3">金刚石探测器</a><a href="products.html#cat4">气体探测器</a><a href="products.html#cat5">电源/电子学</a><a href="products.html#cat6">辐射检测设备</a><a href="products.html#cat7">加速器相关设备</a><a href="products.html#cat8">测试与服务</a><a href="products.html#cat9">光学探测器</a><a href="brands.html">品牌列表</a></div></div>
+<a href="news.html">行业新闻</a>
+<a href="service.html">服务支持</a>
+<div class="dropdown"><a href="about.html">关于我们</a><div class="dropdown-menu"><a href="about.html">公司简介</a><a href="contact.html">联系我们</a><a href="careers.html">人才招聘</a></div></div>
+</nav></div></header>
+
+<section class="page-banner"><div class="container"><h2>业务领域</h2><div class="breadcrumb"><a href="index.html">首页</a><span>/</span>业务领域</div></div></section>
+
+<section class="section"><div class="container">
+<div class="section-subtitle">公司的业务涉及全国各领域，安防、医疗、电子、环保、航天、考古、矿业、石油、质检等社会各行各业。</div>
+<div class="sectors-page-grid" id="sectorsGrid"></div></div></section>
+
+<footer class="footer">
+<div class="footer-top"><a href="products.html">产品中心</a><a href="about.html">关于我们</a><a href="careers.html">人才招聘</a><a href="contact.html">联系我们</a></div>
+<div class="container footer-mid"><div class="footer-logo"><img src="images/logo.png" alt="" style="height:48px;"><span class="name">四川科技</span></div><div class="footer-tel">服务热线：<span>（010）88258670 / 71 / 72</span></div></div>
+<div class="footer-bottom">Copyright &copy; <span id="cy">2025</span> 四川科技 All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13014254号</a></div>
+</footer>
+
+<button id="scrollTopBtn" style="display:none;position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:#12212f;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:20px;z-index:999;">↑</button>
+
+<script src="data/config.js"></script>
+<script src="data/sectors.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+var sg=document.getElementById('sectorsGrid');
+SECTORS_DATA.forEach(function(s){
+var div=document.createElement('div');div.className='sector-page-card';
+div.innerHTML='<div class="sp-icon">'+s.icon+'</div><h4>'+s.name+'</h4><p>'+s.desc+'</p>';
+sg.appendChild(div);
+});
+document.getElementById('cy').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

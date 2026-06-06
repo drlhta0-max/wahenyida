@@ -1,157 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="产品中心 - 北京华恒鑫达科技发展有限公司，提供核探测器、核电子学设备、闪烁体及晶体、辐射监测设备等产品">
-    <title>产品中心 - 北京华恒鑫达科技发展有限公司</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="产品中心 - 四川科技">
+<title>产品中心 - 四川科技</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.goods-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+.goods-card { background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06); transition:all 0.3s ease; }
+.goods-card:hover { transform:translateY(-4px); box-shadow:0 6px 20px rgba(0,0,0,0.12); }
+.goods-card .goods-img-wrap { position:relative; overflow:hidden; height:180px; }
+.goods-card .goods-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
+.goods-card:hover .goods-img-wrap img { transform:scale(1.05); }
+.goods-card .goods-img-wrap .img-shade { position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(18,33,47,0); transition:all 0.3s ease; }
+.goods-card:hover .goods-img-wrap .img-shade { background:rgba(18,33,47,0.06); }
+.goods-card .goods-info { padding:14px 16px; }
+.goods-card .goods-info .goods-tit { font-size:14px; color:#12212f; font-weight:600; margin-bottom:4px; }
+.goods-card .goods-info .goods-desc { font-size:12px; color:#999; }
+.cat-section { margin-bottom:48px; }
+.cat-section h3 { font-size:22px; color:#12212f; margin-bottom:4px; }
+.cat-section .cat-en { font-size:14px; color:#a2b0bc; margin-bottom:8px; }
+.cat-section .cat-desc { font-size:14px; color:#666; margin-bottom:20px; }
+.cat-divider { width:60px; height:3px; background:#ffad00; margin-bottom:20px; }
+@media(max-width:1024px){.goods-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.goods-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.goods-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="四川科技" style="height:52px;"></a>
+<div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+<nav class="nav" id="nav">
+<a href="index.html">首页</a>
+<div class="dropdown"><a href="products.html" class="active">产品中心</a><div class="dropdown-menu" id="prodDropdown"></div></div>
+<a href="news.html">行业新闻</a>
+<a href="service.html">服务支持</a>
+<div class="dropdown"><a href="about.html">关于我们</a><div class="dropdown-menu"><a href="about.html">公司简介</a><a href="contact.html">联系我们</a><a href="careers.html">人才招聘</a></div></div>
+</nav></div></header>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-contact">
-                <span>📞 <span data-cfg="contact.phone"></span></span>
-                <span>📧 <span data-cfg="contact.email"></span></span>
-                <span>📍 <span data-cfg="contact.address"></span></span>
-            </div>
-            <div class="top-lang">
-                <a href="index.html">中文</a> | <a href="#">English</a>
-            </div>
-        </div>
-    </div>
+<section class="page-banner"><div class="container"><h2>产品中心</h2><div class="breadcrumb"><a href="index.html">首页</a><span>/</span>产品中心</div></div></section>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">华</div>
-                <div class="logo-text">
-                    <h1 data-cfg="company.shortName"></h1>
-                    <div class="subtitle" data-cfg="company.enName"></div>
-                </div>
-            </a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span><span></span><span></span>
-            </div>
-            <nav class="nav" id="nav">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="products.html" class="active">产品中心</a>
-                <a href="news.html">新闻中心</a>
-                <a href="contact.html">联系我们</a>
-            </nav>
-        </div>
-    </header>
+<section class="section"><div class="container">
+<div class="products-layout">
+<aside class="sidebar"><div class="sidebar-title">产品分类</div><div class="sidebar-nav" id="sideNav"></div></aside>
+<div id="prodsContent"></div>
+</div></div></section>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>产品中心</h2>
-            <div class="breadcrumb">
-                <a href="index.html">首页</a><span>/</span>产品中心
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+<div class="footer-top"><a href="products.html">产品中心</a><a href="about.html">关于我们</a><a href="careers.html">人才招聘</a><a href="contact.html">联系我们</a></div>
+<div class="container footer-mid"><div class="footer-logo"><img src="images/logo.png" alt="" style="height:48px;"><span class="name">四川科技</span></div><div class="footer-tel">服务热线：<span>（010）88258670 / 71 / 72</span></div></div>
+<div class="footer-bottom">Copyright &copy; <span id="cy">2025</span> 四川科技 All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13014254号</a></div>
+</footer>
 
-    <!-- Products Content -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="products-layout">
-                <!-- Sidebar -->
-                <aside>
-                    <div class="sidebar">
-                        <div class="sidebar-title">产品分类</div>
-                        <div class="sidebar-nav">
-                            <a href="#detectors" class="active">核探测器与元器件</a>
-                            <a href="#electronics">核电子学设备</a>
-                            <a href="#scintillators">闪烁体及晶体</a>
-                            <a href="#monitoring">辐射监测设备</a>
-                            <a href="#accessories">附件与耗材</a>
-                        </div>
-                    </div>
-                </aside>
+<button id="scrollTopBtn" style="display:none;position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:#12212f;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:20px;z-index:999;">↑</button>
 
-                <!-- Main Content (动态加载) -->
-                <div class="products-content" id="productsContent"></div>
-            </div>
-        </div>
-    </section>
+<script src="data/config.js"></script>
+<script src="data/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+// Build sidebar + dropdown nav
+var sn=document.getElementById('sideNav');
+var pd=document.getElementById('prodDropdown');
+var pc=document.getElementById('prodsContent');
+PRODUCTS_DATA.forEach(function(cat){
+    // Sidebar
+    var a=document.createElement('a');a.href='#'+cat.id;a.textContent=cat.name;
+    a.addEventListener('click',function(e){e.preventDefault();document.getElementById(cat.id).scrollIntoView({behavior:'smooth'});});
+    sn.appendChild(a);
+    // Product dropdown nav
+    var da=document.createElement('a');da.href='#'+cat.id;da.textContent=cat.name;
+    pd.appendChild(da);
+    // Category section
+    var sec=document.createElement('div');sec.id=cat.id;sec.className='cat-section';
+    var cards=cat.items.map(function(item){
+        return '<a href="'+item.link+'" class="goods-card"><div class="goods-img-wrap"><img src="'+item.img+'" alt="'+item.name+'" loading="lazy"><div class="img-shade"></div></div><div class="goods-info"><p class="goods-tit">'+item.name+'</p><p class="goods-desc">'+item.desc+'</p></div></a>';
+    }).join('');
+    sec.innerHTML='<h3>'+cat.name+'</h3><div class="cat-en">'+cat.en+'</div><div class="cat-divider"></div><p class="cat-desc">'+cat.desc+'</p><div class="goods-grid">'+cards+'</div>';
+    pc.appendChild(sec);
+});
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h4 data-cfg="company.fullName"></h4>
-                    <p data-cfg="introShort"></p>
-                </div>
-                <div class="footer-links">
-                    <h4>快速导航</h4>
-                    <a href="index.html">首页</a>
-                    <a href="about.html">关于我们</a>
-                    <a href="products.html">产品中心</a>
-                    <a href="news.html">新闻中心</a>
-                    <a href="contact.html">联系我们</a>
-                </div>
-                <div class="footer-links">
-                    <h4>产品分类</h4>
-                    <a href="products.html#detectors">核探测器与元器件</a>
-                    <a href="products.html#electronics">核电子学设备</a>
-                    <a href="products.html#scintillators">闪烁体及晶体</a>
-                    <a href="products.html#monitoring">辐射监测设备</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>联系我们</h4>
-                    <p>📍 <span data-cfg="contact.address"></span></p>
-                    <p>📞 <span data-cfg="contact.phone"></span></p>
-                    <p>📠 <span data-cfg="contact.fax"></span></p>
-                    <p>📧 <span data-cfg="contact.email"></span></p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© <span id="currentYear">2025</span> <span data-cfg="company.fullName"></span> | <span data-cfg="company.icp"></span> | <a href="#">法律声明</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="scrollTopBtn" style="display:none; position:fixed; bottom:30px; right:30px; width:44px; height:44px; background:var(--primary); color:#fff; border:none; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999; transition:all 0.3s ease;">↑</button>
-    <script>
-        const btn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 400 ? 'block' : 'none'; });
-        btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-    <script src="data/config.js"></script>
-    <script src="data/products.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        (function() {
-            var container = document.getElementById('productsContent');
-            PRODUCTS_DATA.forEach(function(cat) {
-                var tags = cat.tags.map(function(t) { return '<span class="tag">' + t + '</span>'; }).join('');
-                var rows = cat.items.map(function(item, j) {
-                    var border = j === cat.items.length - 1 ? 'none' : '1px solid #eee';
-                    return '<tr style="border-bottom:' + border + ';">' +
-                        '<td style="padding:10px 12px; color:var(--primary); font-weight:600; width:240px;">' + item.name + '</td>' +
-                        '<td style="padding:10px 12px;">' + item.desc + '</td></tr>';
-                }).join('');
-                var card = document.createElement('div');
-                card.id = cat.id;
-                card.className = 'product-detail-card';
-                card.innerHTML =
-                    '<h3>' + cat.icon + ' ' + cat.name + '</h3>' +
-                    '<div class="en-name">' + cat.enName + '</div>' +
-                    '<div class="tags">' + tags + '</div>' +
-                    '<p>' + cat.desc + '</p>' +
-                    '<table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:14px;">' + rows + '</table>';
-                container.appendChild(card);
-            });
-        })();
-    </script>
+// Highlight active sidebar item on scroll
+var sideLinks=document.querySelectorAll('.sidebar-nav a');
+window.addEventListener('scroll',function(){
+    var scrollPos=window.scrollY+150;
+    PRODUCTS_DATA.forEach(function(cat,i){
+        var el=document.getElementById(cat.id);
+        if(el&&el.offsetTop<=scrollPos&&el.offsetTop+el.offsetHeight>scrollPos){
+            sideLinks.forEach(function(l){l.classList.remove('active');});
+            if(sideLinks[i])sideLinks[i].classList.add('active');
+        }
+    });
+});
+sideLinks[0].classList.add('active');
+document.getElementById('cy').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
